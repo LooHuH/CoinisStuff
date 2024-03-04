@@ -1,2 +1,0 @@
-from askvar import askvar
-
