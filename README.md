@@ -1,2 +1,3 @@
-This is new repo description
-If you read this, I updated this repo through git commit
+This is my repo for Coinis Courses
+It has py files
+Yep
