@@ -3,7 +3,7 @@ from askvar import askvar
 text = askvar('text', raw=True)
 
 vovewls = False
-for x in 'eyuioa':
+for x in 'euioa':
     if x in text:
         print('text has vowels')
         vovewls = True
