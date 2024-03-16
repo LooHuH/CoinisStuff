@@ -70,8 +70,12 @@ class Library:
                 self._books.remove(book)
                 break
     
-    def search_book(self, attribute: str):
-        pass
+    def search_book(self, name: str = None, author: str = None):
+        for book in self._books:
+            book_info = book.get(name=True, author=True)
+            if (name == book_info['name']
+                    or author == book_info['author']):
+                return book
     
     def show_books(self, print_result: bool = False):
         result = [book.get(all=True, amount=False) for book in self._books]
