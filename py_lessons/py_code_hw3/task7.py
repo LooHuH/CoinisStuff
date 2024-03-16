@@ -78,7 +78,12 @@ class Library:
                 return book
     
     def show_books(self, print_result: bool = False):
-        result = [book.get(all=True, amount=False) for book in self._books]
+        result = []
+        for book in self._books:
+            book_info = book.get(all=True, amount=False)
+            book_amount = book.get(amount=True)['amount']
+            if book_amount > 0:
+                result.append(book_info)
         if print_result:
             print(result)
         else:
