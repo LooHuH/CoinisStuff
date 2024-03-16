@@ -6,10 +6,10 @@ class Book:
             year: int, 
             amount: int):
         
-        self.___name = name
-        self.___author = author
-        self.___year = year
-        self.___amount = amount
+        self.__name = name
+        self.__author = author
+        self.__year = year
+        self.__amount = amount
     
     def set(self, 
             name: str = None, 
@@ -18,13 +18,13 @@ class Book:
             amount: int = None):
         
         if name is not None:
-            self.___name = name
+            self.__name = name
         if author is not None:
-            self.___author = author
+            self.__author = author
         if year is not None:
-            self.___year = year
+            self.__year = year
         if amount is not None:
-            self.___amount = amount
+            self.__amount = amount
     
     def get(self, 
             all: bool = None, 
@@ -46,7 +46,7 @@ class Book:
                 amount = True
         
         if name:
-            result['name'] = self.___name
+            result['name'] = self.__name
         if author:
             result['author'] = self.__author
         if year:
