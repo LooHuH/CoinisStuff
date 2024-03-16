@@ -6,10 +6,10 @@ class Book:
             year: int, 
             amount: int):
         
-        self._name = name
-        self._author = author
-        self._year = year
-        self._amount = amount
+        self.___name = name
+        self.___author = author
+        self.___year = year
+        self.___amount = amount
     
     def set(self, 
             name: str = None, 
@@ -18,13 +18,13 @@ class Book:
             amount: int = None):
         
         if name is not None:
-            self._name = name
+            self.___name = name
         if author is not None:
-            self._author = author
+            self.___author = author
         if year is not None:
-            self._year = year
+            self.___year = year
         if amount is not None:
-            self._amount = amount
+            self.___amount = amount
     
     def get(self, 
             all: bool = None, 
@@ -46,32 +46,32 @@ class Book:
                 amount = True
         
         if name:
-            result['name'] = self._name
+            result['name'] = self.___name
         if author:
-            result['author'] = self._author
+            result['author'] = self.__author
         if year:
-            result['year'] = self._year
+            result['year'] = self.__year
         if amount:
-            result['amount'] = self._amount
+            result['amount'] = self.__amount
         
         return result
 
 
 class Library:
     def __init__(self):
-        self._books = []
+        self.__books = []
     
     def add_book(self, book: Book):
-        self._books.append(book)
+        self.__books.append(book)
     
     def delete_book(self, book_name: str):
-        for book in self._books:
+        for book in self.__books:
             if book.get(name=True)['name'] == book_name:
-                self._books.remove(book)
+                self.__books.remove(book)
                 break
     
     def search_book(self, name: str = None, author: str = None):
-        for book in self._books:
+        for book in self.__books:
             book_info = book.get(name=True, author=True)
             if (name == book_info['name']
                     or author == book_info['author']):
@@ -79,7 +79,7 @@ class Library:
     
     def show_books(self, print_result: bool = False):
         result = []
-        for book in self._books:
+        for book in self.__books:
             book_info = book.get(all=True, amount=False)
             book_amount = book.get(amount=True)['amount']
             if book_amount > 0:
