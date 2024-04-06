@@ -28,6 +28,13 @@ for column in range(2, row_len):
     row_len, column_name, nums = read_nums('data.csv', column)
     if not nums:
         break
-    print(f'Average of {column_name} - {sum(nums) / len(nums)}')
+    average = sum(nums) / len(nums)
+    print(f'Average of {column_name} - {round(average, 5)}')
 
-
+for column in range(2, row_len):
+    row_len, column_name, nums = read_nums('data.csv', column)
+    if not nums:
+        break
+    average = sum(nums) / len(nums)
+    percentage = average / max(nums)
+    print(f'middle/average percentage - {round(100*(percentage), 2)}')
