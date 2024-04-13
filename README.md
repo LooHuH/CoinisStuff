@@ -1,3 +1,3 @@
-This is my repo for Coinis Courses
-It has py files
-Yep
+# REPO FOR PYTHON LEARNING COURSE
+
+All I do at Coinis courses stored here (or most of it)
